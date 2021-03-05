@@ -11,8 +11,7 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(DemoApplication.class);
-		log.info("Test log");
+		log.info("Final log");
 	}
 
 }
