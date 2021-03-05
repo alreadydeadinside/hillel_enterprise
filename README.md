@@ -1,1 +1,1 @@
-There are all my Java homeworks on hillel enterprise course
+There are all my Java homeworks during hillel enterprise course
