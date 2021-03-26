@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.example.demo.model.User;
 import com.example.demo.repository.AbstractRepository;
+import com.example.demo.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import lombok.AllArgsConstructor;
 
@@ -11,21 +14,22 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 
-public class UserServiceImpl implements UserService<User>{
+public class UserServiceImpl implements UserService<User> {
+    @Autowired
+    @Qualifier("jpaRepositoryImpl")
+    private final AbstractRepository<User> repository;
 
-    private final AbstractRepository<User> jdbcRepository;
-
-    public UserServiceImpl(AbstractRepository<User> jdbcRepository) {
-        this.jdbcRepository = jdbcRepository;
+    public UserServiceImpl() {
+        repository = null;
     }
 
     @Override
     public void create(User user) {
-        jdbcRepository.create(user);
+        repository.create(user);
     }
 
     @Override
     public List<User> getAll() {
-        return jdbcRepository.getAll();
+        return repository.getAll();
     }
 }

@@ -15,16 +15,23 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<flyway.version>7.7.1</flyway.version>
 	</properties>
 	<dependencies>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+        <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>7.7.1</version>
+        </dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>

@@ -18,7 +18,7 @@ public class DemoApplication {
     private UserService userService;
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoprojectApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
         log.info("Final log");
     }
 
@@ -27,8 +27,7 @@ public class DemoApplication {
         List<User> users = userService.getAll();
 
         for (User user : users) {
-            log.info(String.format("\n Name: %s \n LastName: %s \n E-mail: %s", user.getFirstName(),
-                    user.getLastName(), user.getEmail()));
+            log.info(user.toString());
         }
     }
 }
