@@ -1,8 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.model.User;
-import com.example.demo.repository.AbstractRepository;
-import com.example.demo.model.User;
+import com.example.demo.model.OldUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Repository;
@@ -19,14 +17,14 @@ public class JpaRepositoryImpl implements AbstractRepository {
     EntityManager entityManager;
 
     @Transactional
-    public List<User> getAll() {
-        TypedQuery<User> fromUser = entityManager.createQuery("from User", User.class);
+    public List<OldUser> getAll() {
+        TypedQuery<OldUser> fromUser = entityManager.createQuery("from User", OldUser.class);
         fromUser.setLockMode(LockModeType.PESSIMISTIC_WRITE);
         return fromUser.getResultList();
     }
 
     @Override
-    public void create(User user) {
+    public void create(OldUser user) {
 
     }
 }

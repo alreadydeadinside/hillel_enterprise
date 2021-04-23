@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.model.User;
+import com.example.demo.model.OldUser;
 import com.example.demo.services.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,9 +24,9 @@ public class DemoApplication {
 
     @PostConstruct
     public void postConstruct() {
-        List<User> users = userService.getAll();
+        List<OldUser> users = userService.getAll();
 
-        for (User user : users) {
+        for (OldUser user : users) {
             log.info(user.toString());
         }
     }
