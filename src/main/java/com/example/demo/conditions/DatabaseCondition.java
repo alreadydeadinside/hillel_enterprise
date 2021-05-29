@@ -6,7 +6,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 
 import java.util.Map;
 
-public class DatabaseTypeCondition implements Condition {
+class DatabaseTypeCondition implements Condition {
 
     @Override
     public boolean matches(ConditionContext conditionContext,
