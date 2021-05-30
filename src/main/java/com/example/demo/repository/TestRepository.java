@@ -1,6 +1,8 @@
 package com.example.demo.repository;
 
-import com.example.demo.AOP.LogExecutionTime;
+//import com.example.demo.AOP.LogExecutionTime;
+
+import com.example.demo.aop.LogExecutionTime;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

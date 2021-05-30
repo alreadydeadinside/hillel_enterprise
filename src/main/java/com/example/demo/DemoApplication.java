@@ -1,11 +1,10 @@
 package com.example.demo;
 
-import com.example.demo.model.OldUser;
 import com.example.demo.services.UserService;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -24,9 +23,9 @@ public class DemoApplication {
 
     @PostConstruct
     public void postConstruct() {
-        List<OldUser> users = userService.getAll();
+        List users = userService.getAll();
 
-        for (OldUser user : users) {
+        for (Object user : users) {
             log.info(user.toString());
         }
     }
